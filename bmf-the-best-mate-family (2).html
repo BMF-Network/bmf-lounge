@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B M F (The Best Mate Family) — "Our love never fail"</title>
+  <meta name="description" content="Founded in 2021. The Best Mate Family dedicated to helping others, promoting peace and harmony, and unconditional love.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #040d27;
+      --bg-midnight: #061234;
+      --bg-surface: #071740;
+      --bg-card: #0a1f5c;
+      --blue-primary: #12379c;
+      --blue-light: #2563eb;
+      --gold-accent: #f59e0b;
+      --gold-light: #fbbf24;
+      --gold-dark: #b45309;
+      --text-white: #ffffff;
+      --text-muted: #bfdbfe;
+      --text-dim: #93c5fd;
+      --border-blue: #1e3a8a;
+      --border-gold: rgba(245, 158, 11, 0.45);
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-family: var(--font-main); background-color: var(--bg-dark); color: var(--text-white); line-height: 1.5; }
+    body { background-color: var(--bg-dark); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .tricolor-stripe { height: 3px; background: linear-gradient(90deg, #1d4ed8 0%, #f59e0b 50%, #1d4ed8 100%); width: 100%; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(6, 18, 52, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-blue);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 2rem; }
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+    .brand-crest {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: linear-gradient(135deg, #1d4ed8, #05143d);
+      border: 1px solid var(--gold-accent);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; color: var(--gold-accent); box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .brand-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; letter-spacing: 0.05em; }
+    .brand-subtitle { font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.08em; display: block; }
+    .slogan-tag { color: var(--gold-light); font-style: italic; font-weight: 600; }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: 0.8125rem; font-weight: 600; color: var(--text-muted); }
+    .nav-links a:hover { color: var(--gold-accent); transition: color 0.2s; }
+
+    .header-actions { display: flex; align-items: center; gap: 0.75rem; }
+
+    .btn-gold {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      color: #030818; font-weight: 700; font-size: 0.8125rem;
+      padding: 0.625rem 1.25rem; border-radius: 8px;
+      transition: transform 0.15s, opacity 0.15s, box-shadow 0.15s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+    }
+    .btn-gold:hover { opacity: 0.95; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35); }
+
+    .btn-outline {
+      background: rgba(14, 40, 110, 0.6); border: 1px solid var(--border-blue);
+      color: white; font-weight: 600; font-size: 0.8125rem;
+      padding: 0.625rem 1.25rem; border-radius: 8px; transition: background 0.2s, border-color 0.2s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-outline:hover { background: rgba(29, 78, 216, 0.8); border-color: var(--gold-accent); }
+
+    .user-pill {
+      background: rgba(4, 13, 39, 0.8); border: 1px solid var(--border-blue);
+      border-radius: 8px; padding: 0.35rem 0.75rem; font-size: 0.75rem; color: #bfdbfe;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+
+    /* Hero */
+    .hero { padding: 4.5rem 0 5.5rem; position: relative; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; align-items: center; }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gold-accent); margin-bottom: 0.75rem;
+    }
+    .slogan-banner {
+      background: rgba(245, 158, 11, 0.12);
+      border-left: 3px solid var(--gold-accent);
+      padding: 0.6rem 1.1rem; border-radius: 0 10px 10px 0;
+      margin-bottom: 1.25rem; font-size: 1.15rem; font-weight: 800;
+      color: var(--gold-light); font-style: italic; max-width: 520px;
+    }
+    .hero-title { font-family: var(--font-display); font-size: 3.5rem; font-weight: 900; line-height: 1.08; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+    .hero-title .gold-text { color: var(--gold-accent); display: block; }
+    .hero-desc { font-size: 1.125rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem; max-width: 540px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.875rem; align-items: center; margin-bottom: 2.5rem; }
+
+    .hero-card {
+      border-radius: 1.25rem; overflow: hidden; border: 1px solid var(--border-blue);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); background: var(--bg-surface); position: relative;
+    }
+    .hero-card-img { width: 100%; height: 350px; object-fit: cover; display: block; background: #0f2b82; }
+    .hero-card-badge {
+      position: absolute; bottom: 1rem; left: 1rem; right: 1rem; padding: 1rem;
+      background: rgba(6, 18, 52, 0.95); backdrop-filter: blur(8px);
+      border-radius: 12px; border: 1px solid var(--border-gold);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .stats-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;
+      margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(30, 58, 138, 0.4);
+    }
+    .stat-box { background: rgba(7, 23, 64, 0.5); border: 1px solid var(--border-blue); border-radius: 12px; padding: 1.25rem 1rem; text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: 2.25rem; font-weight: 800; color: white; }
+    .stat-num span { color: var(--gold-accent); }
+    .stat-label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600; margin-top: 0.25rem; }
+
+    /* Sections */
+    .section { padding: 5rem 0; border-top: 1px solid rgba(30, 58, 138, 0.5); }
+    .section-kicker { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-accent); font-weight: 700; margin-bottom: 0.5rem; }
+    .section-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 1rem; }
+    .section-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 620px; line-height: 1.6; }
+
+    /* Announcements */
+    .announcements-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .ann-card {
+      background: var(--bg-surface); border: 1px solid var(--border-blue);
+      border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .ann-card:hover { border-color: var(--gold-accent); transform: translateY(-2px); }
+    .ann-card.urgent { border-color: rgba(244, 63, 94, 0.6); background: linear-gradient(180deg, #170a24, #071740); }
+    .ann-badge { font-size: 0.6875rem; font-weight: 800; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 6px; display: inline-block; }
+    .ann-badge.urgent { background: rgba(225, 29, 72, 0.2); color: #fda4af; border: 1px solid #e11d48; }
+    .ann-badge.pinned { background: rgba(245, 158, 11, 0.2); color: #fde68a; border: 1px solid #f59e0b; }
+
+    /* Meeting Call Room */
+    .call-container {
+      background: #061234; border: 1px solid var(--border-blue); border-radius: 18px;
+      overflow: hidden; margin-top: 2.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .call-header {
+      padding: 1rem 1.5rem; background: #040e2d; border-bottom: 1px solid var(--border-blue);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .call-body { display: grid; grid-template-columns: 1.3fr 0.7fr; }
+    .video-grid { padding: 1.25rem; background: #040d27; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; min-height: 380px; }
+    .tile {
+      background: #071740; border: 1px solid var(--border-blue); border-radius: 12px;
+      padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; position: relative;
+    }
+    .tile.speaking { border-color: var(--gold-accent); background: linear-gradient(180deg, #0a2366, #040e2d); }
+    .tile-avatar {
+      width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #2563eb, #0b1a45);
+      border: 2px solid var(--gold-accent); display: flex; align-items: center; justify-content: center;
+      margin: auto; font-weight: 800; font-size: 1.25rem; color: white;
+    }
+    .tile-footer {
+      background: rgba(0,0,0,0.6); padding: 0.35rem 0.6rem; border-radius: 6px;
+      font-size: 0.75rem; font-weight: 700; display: flex; justify-content: space-between;
+    }
+    .call-controls {
+      padding: 0.75rem 1.25rem; background: #06143d; border-top: 1px solid var(--border-blue);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .ctrl-btn {
+      padding: 0.5rem 1rem; background: #0a1f5c; color: white; border-radius: 8px;
+      font-size: 0.75rem; font-weight: 700; transition: background 0.2s;
+    }
+    .ctrl-btn:hover { background: #1d4ed8; }
+    .ctrl-btn.active { background: var(--gold-accent); color: #030818; }
+    .ctrl-btn.danger { background: #e11d48; }
+
+    .call-side { background: #050f2e; border-left: 1px solid var(--border-blue); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .agenda-card { background: rgba(7, 23, 64, 0.7); border: 1px solid var(--border-blue); border-radius: 10px; padding: 0.875rem; margin-bottom: 0.75rem; font-size: 0.8125rem; }
+
+    /* Media Hub */
+    .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .media-card {
+      position: relative; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-blue);
+      background: #040d27; min-height: 260px; padding: 1.25rem; display: flex; flex-direction: column;
+      justify-content: flex-end; cursor: pointer; transition: transform 0.2s, border-color 0.2s;
+    }
+    .media-card:hover { transform: translateY(-3px); border-color: var(--gold-accent); }
+    .media-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .media-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(4, 13, 39, 0.95), transparent 70%); }
+    .media-content { position: relative; z-index: 10; }
+    .play-badge {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 52px; height: 52px; border-radius: 50%; background: rgba(245, 158, 11, 0.9);
+      color: #030818; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    /* Group Chat */
+    .chat-container {
+      background: #061234; border: 1px solid var(--border-blue); border-radius: 18px;
+      overflow: hidden; margin-top: 2rem; display: grid; grid-template-columns: 0.7fr 1.3fr;
+      min-height: 480px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .chat-sidebar { background: #050f2e; border-right: 1px solid var(--border-blue); padding: 1.25rem; }
+    .chat-feed { background: #040d27; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .chat-messages { display: flex; flex-direction: column; gap: 0.875rem; max-height: 360px; overflow-y: auto; padding-right: 0.5rem; }
+    .chat-bubble {
+      background: #071740; border: 1px solid var(--border-blue); border-radius: 12px;
+      padding: 0.875rem; font-size: 0.85rem; max-width: 85%;
+    }
+    .chat-bubble.you { align-self: flex-end; background: #0e276b; border-color: var(--border-gold); }
+
+    /* Roster */
+    .squad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .member-card { background: var(--bg-surface); border: 1px solid var(--border-blue); border-radius: 16px; padding: 1.5rem; }
+    .member-card:hover { border-color: var(--gold-accent); }
+    .member-role { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--gold-accent); margin-bottom: 0.5rem; }
+
+    /* Message Board */
+    .board-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; margin-top: 2.5rem; }
+    .note-card { background: var(--bg-surface); border: 1px solid var(--border-blue); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; }
+    .form-box { background: var(--bg-surface); border: 1px solid var(--border-gold); border-radius: 16px; padding: 1.5rem; }
+    .form-input, .form-textarea, .form-select {
+      width: 100%; background: #040d27; border: 1px solid var(--border-blue);
+      border-radius: 8px; padding: 0.65rem 0.85rem; color: white; margin-bottom: 0.75rem; font-family: inherit; font-size: 0.85rem;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--gold-accent); outline: none; }
+
+    footer { background: #020617; border-top: 1px solid var(--border-blue); padding: 4rem 0 2rem; margin-top: 4rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(30, 58, 138, 0.3); }
+
+    /* Modal Overlay */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(2, 6, 23, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.25rem; opacity: 0; visibility: hidden;
+      transition: opacity 0.28s ease, visibility 0.28s ease;
+    }
+    .modal-overlay.active { opacity: 1; visibility: visible; }
+    .modal-box {
+      width: 100%; max-width: 460px; background: #061234;
+      border: 1.5px solid var(--gold-accent); border-radius: 24px;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 30px rgba(245, 158, 11, 0.2);
+      padding: 2.25rem; position: relative; color: var(--text-white);
+      transform: scale(0.92) translateY(12px);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active .modal-box { transform: scale(1) translateY(0); }
+    .modal-close-btn {
+      position: absolute; top: 1.25rem; right: 1.25rem; width: 36px; height: 36px;
+      border-radius: 10px; background: rgba(7, 23, 64, 0.7); border: 1px solid var(--border-blue);
+      color: #93c5fd; font-size: 1.5rem; line-height: 1; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .modal-close-btn:hover { background: #0e2b82; color: var(--gold-light); border-color: var(--gold-accent); }
+    .modal-header-icon {
+      width: 58px; height: 58px; border-radius: 16px;
+      background: linear-gradient(135deg, #1d4ed8, #05143d); border: 1.5px solid var(--gold-accent);
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .modal-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 0.25rem; }
+    .modal-subtitle { font-size: 0.8125rem; color: var(--text-muted); text-align: center; margin-bottom: 1.75rem; }
+    .modal-subtitle .slogan-highlight { color: var(--gold-light); font-style: italic; font-weight: 600; display: block; margin-top: 0.25rem; }
+    .modal-form-group { margin-bottom: 1.25rem; text-align: left; }
+    .modal-label { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin-bottom: 0.4rem; }
+    .modal-input {
+      width: 100%; background: #03091e; border: 1px solid var(--border-blue); border-radius: 10px;
+      padding: 0.8rem 1rem; color: white; font-family: inherit; font-size: 0.9375rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .modal-input:focus { border-color: var(--gold-accent); box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2); outline: none; }
+    .modal-submit-btn {
+      width: 100%; padding: 0.85rem; background: linear-gradient(90deg, #f59e0b, #d97706);
+      color: #030818; font-weight: 800; font-size: 0.9375rem; border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3); transition: transform 0.15s, opacity 0.15s; margin-top: 0.5rem;
+    }
+    .modal-submit-btn:hover { opacity: 0.95; transform: translateY(-1px); }
+    .modal-hint-box { margin-top: 1.25rem; padding: 0.75rem; border-radius: 10px; background: rgba(7, 23, 64, 0.6); border: 1px solid rgba(30, 58, 138, 0.5); font-size: 0.75rem; color: #93c5fd; text-align: center; }
+    .modal-hint-box strong { color: var(--gold-light); }
+    .modal-error { background: rgba(225, 29, 72, 0.2); border: 1px solid #e11d48; color: #fecdd3; padding: 0.6rem 0.75rem; border-radius: 8px; font-size: 0.75rem; margin-bottom: 1rem; display: none; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .call-body, .chat-container, .board-grid, .footer-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-strip { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .hero-title { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="tricolor-stripe"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="brand">
+          <div class="brand-crest">
+            <svg viewBox="0 0 100 100" width="28" height="28" fill="#f59e0b">
+              <path d="M25 20 H45 V75 L35 85 L25 75 Z" />
+              <path d="M55 20 H75 V75 L65 85 L55 75 Z" />
+              <path d="M35 20 L50 48 L65 20 Z" />
+              <path d="M15 25 H35 C50 25 50 48 35 48 H15 Z" />
+              <path d="M15 48 H38 C55 48 55 75 38 75 H15 Z" />
+              <path d="M65 25 H90 V38 H78 V50 H88 V62 H78 V75 H65 Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="brand-title">B M F</span>
+            <span class="brand-subtitle">Est. 2021 · <span class="slogan-tag">"Our love never fail"</span></span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#announcements">Announcements</a>
+          <a href="#meeting">Group Call Lounge</a>
+          <a href="#media">Pictures &amp; Videos</a>
+          <a href="#chat">Group Chat</a>
+          <a href="#squad">Family Roster</a>
+          <a href="#board">Message Board</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="user-pill" id="userPillDisplay" style="display:none;">
+            <span>👋 Hello, <strong id="userNameLabel" style="color:white;">Member</strong></span>
+          </div>
+          <button type="button" class="btn-gold" onclick="openLoginModal('Header Navigation')">
+            Enter Family Room
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- High-Concurrency Live Telemetry & Capacity Banner (1,000+ Concurrent Users) -->
+  <div style="background: #050f2c; border-bottom: 1px solid rgba(30, 58, 138, 0.8); padding: 0.5rem 0; font-size: 0.75rem;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem;">
+      <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+        <span style="background: rgba(6, 78, 59, 0.6); border: 1px solid #10b981; color: #6ee7b7; padding: 0.2rem 0.6rem; border-radius: 9999px; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+          High-Concurrency Engine Active
+        </span>
+        <span style="color: white; font-weight: 700;">
+          <strong id="liveMembersCount" style="color: #fbbf24; font-size: 0.85rem;">1,024</strong> Active Members Online Now
+        </span>
+        <span style="color: #93c5fd;">• Tested Capacity: <strong style="color: #bfdbfe;">5,000+ Concurrent Users</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.4rem;">
+        <span style="color: #93c5fd; font-size: 0.7rem;">Simulate Traffic:</span>
+        <button type="button" class="btn-outline" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;" onclick="simulateLoad(1250)">1.2K Users</button>
+        <button type="button" class="btn-outline" style="padding: 0.2rem 0.5rem; font-size: 0.7rem;" onclick="simulateLoad(2500)">2.5K Users</button>
+        <button type="button" class="btn-gold" style="padding: 0.2rem 0.6rem; font-size: 0.7rem;" onclick="simulateLoad(5000)">5K Peak</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-kicker">
+            <span>●</span> Serving Since 2021 · Peace &amp; Harmony
+          </div>
+          <div class="slogan-banner">
+            "Our love never fail"
+          </div>
+          <h1 class="hero-title">
+            B M F
+            <span class="gold-text">The Best Mate Family</span>
+          </h1>
+          <p class="hero-desc">
+            A united community family founded in 2021, dedicated to helping others, nurturing peace and harmony among our members, and loving each other unconditionally.
+          </p>
+          <div class="hero-actions">
+            <button type="button" class="btn-gold" onclick="openLoginModal('Hero Join Lounge')">
+              Join Lounge
+            </button>
+            <button type="button" class="btn-outline" onclick="openLoginModal('Hero Family Room')">
+              Enter Family Room
+            </button>
+            <a href="#announcements" class="btn-outline">
+              View Bulletins
+            </a>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:center;">
+          <div class="hero-card" style="width:100%; max-width:420px; padding:2rem; text-align:center; background:linear-gradient(180deg, #091e57 0%, #06143b 60%, #03091e 100%); border:2px solid var(--gold-accent); border-radius:24px; box-shadow:0 25px 60px rgba(0,0,0,0.8), 0 0 35px rgba(245,158,11,0.25);">
+            <div style="display:inline-block; padding:0.25rem 0.85rem; border-radius:9999px; background:rgba(7,23,64,0.8); border:1px solid rgba(245,158,11,0.4); font-size:0.7rem; font-weight:800; text-transform:uppercase; color:#fbbf24; letter-spacing:0.1em; margin-bottom:1.5rem;">
+              Official Family Crest · EST. 2021
+            </div>
+            
+            <div style="width:140px; height:140px; margin:0 auto 1.25rem; border-radius:20px; background:linear-gradient(135deg, #1d4ed8, #05143d); border:2px solid var(--gold-accent); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 30px rgba(0,0,0,0.7);">
+              <svg viewBox="0 0 100 100" width="85" height="85" fill="#f59e0b">
+                <path d="M25 20 H45 V75 L35 85 L25 75 Z" />
+                <path d="M55 20 H75 V75 L65 85 L55 75 Z" />
+                <path d="M35 20 L50 48 L65 20 Z" />
+                <path d="M15 25 H35 C50 25 50 48 35 48 H15 Z" />
+                <path d="M15 48 H38 C55 48 55 75 38 75 H15 Z" />
+                <path d="M65 25 H90 V38 H78 V50 H88 V62 H78 V75 H65 Z" />
+              </svg>
+            </div>
+
+            <h3 style="font-family:var(--font-display); font-size:1.75rem; font-weight:900; color:white; letter-spacing:0.05em; margin-bottom:0.25rem;">
+              B M F
+            </h3>
+            <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:#bfdbfe; font-weight:700;">
+              The Best Mate Family
+            </p>
+            <div style="margin-top:0.5rem; font-size:0.875rem; font-weight:700; color:#fbbf24; font-style:italic;">
+              "Our love never fail"
+            </div>
+
+            <div style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid rgba(30,58,138,0.6); display:flex; justify-content:space-around; font-size:0.75rem; color:#93c5fd;">
+              <div><strong style="color:white; display:block;">ESTABLISHED</strong>2021</div>
+              <div style="width:1px; background:#1e3a8a;"></div>
+              <div><strong style="color:white; display:block;">MOTTO</strong>Unconditional Love</div>
+              <div style="width:1px; background:#1e3a8a;"></div>
+              <div><strong style="color:#fbbf24; display:block;">COMMUNITY</strong>1,000+ Online</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stat-box">
+          <div class="stat-num">2021</div>
+          <div class="stat-label">Founded Year</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="statMembersCount">1,024<span>+</span></div>
+          <div class="stat-label">Live Concurrent Members</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">100<span>%</span></div>
+          <div class="stat-label">Peace &amp; Harmony</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" style="font-size: 1.25rem; color: var(--gold-accent); padding-top: 0.5rem;">
+            "NEVER FAILS"
+          </div>
+          <div class="stat-label">Family Slogan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="announcements" class="section">
+    <div class="container">
+      <div class="section-kicker">Bulletins &amp; Urgent Notices</div>
+      <h2 class="section-title">Official Announcements Area</h2>
+      <p class="section-desc">
+        Important updates on community outreach drives, weekly virtual gatherings, and mutual welfare support.
+      </p>
+
+      <div class="announcements-grid">
+        <div class="ann-card urgent">
+          <div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.75rem;">
+              <span class="ann-badge urgent">Urgent Action</span>
+              <span style="font-size:0.75rem; color:#bfdbfe;">Today</span>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">City Shelter Warm Blanket Packing</h3>
+            <p style="font-size:0.85rem; color:#bfdbfe; line-height:1.5;">
+              Assembling 150 thermal blankets and hot meal kits this Saturday at 10:00 AM. Please confirm attendance with Alex.
+            </p>
+          </div>
+          <div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.75rem; color:#f59e0b;">Alex Vance (Director)</span>
+            <button class="btn-gold" style="padding:0.4rem 0.8rem; font-size:0.75rem;" onclick="openLoginModal('Urgent RSVP')">RSVP Now</button>
+          </div>
+        </div>
+
+        <div class="ann-card">
+          <div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.75rem;">
+              <span class="ann-badge pinned">Pinned Bulletin</span>
+              <span style="font-size:0.75rem; color:#bfdbfe;">Wednesdays</span>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Weekly Peace &amp; Harmony Assembly</h3>
+            <p style="font-size:0.85rem; color:#bfdbfe; line-height:1.5;">
+              Our weekly group video call takes place every Wednesday at 19:30. Dedicated to listening, prayer, and reconciliation.
+            </p>
+          </div>
+          <div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.75rem; color:#f59e0b;">Marcus Sterling (Peace Lead)</span>
+            <button class="btn-outline" style="padding:0.4rem 0.8rem; font-size:0.75rem;" onclick="openLoginModal('Weekly Call Entry')">Enter Call</button>
+          </div>
+        </div>
+
+        <div class="ann-card">
+          <div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.75rem;">
+              <span class="ann-badge" style="background:#0a2366; color:#93c5fd; border:1px solid #1e3a8a;">Care Fund</span>
+              <span style="font-size:0.75rem; color:#bfdbfe;">Update</span>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.5rem;">Elder Joseph Care Package Delivered</h3>
+            <p style="font-size:0.85rem; color:#bfdbfe; line-height:1.5;">
+              Medical groceries and prescription supplies were delivered successfully. Thank you to everyone who contributed!
+            </p>
+          </div>
+          <div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.75rem; color:#f59e0b;">Sarah Laurent (Welfare)</span>
+            <span style="font-size:0.75rem; color:#34d399; font-weight:700;">Completed ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="meeting" class="section">
+    <div class="container">
+      <div class="section-kicker">Live Family Video Lounge</div>
+      <h2 class="section-title">BMF Group Call &amp; Meeting Room</h2>
+      <p class="section-desc">
+        A dedicated place where members make calls as a group during meetings, pray together, and coordinate community outreach.
+      </p>
+
+      <div class="call-container">
+        <div class="call-header">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <strong style="color:white; font-size:0.95rem;">Weekly Peace, Harmony &amp; Outreach Assembly</strong>
+            <span style="background:#064e3b; color:#6ee7b7; padding:0.15rem 0.5rem; border-radius:4px; font-size:0.7rem; font-weight:800;">
+              ● LIVE
+            </span>
+          </div>
+          <div style="font-size:0.75rem; color:#f59e0b; font-weight:700;">
+            Slogan: "Our love never fail"
+          </div>
+        </div>
+
+        <div class="call-body">
+          <div class="video-grid" id="videoGrid">
+            <div class="tile speaking">
+              <span style="font-size:0.7rem; color:#f59e0b; font-weight:800;">● Speaking</span>
+              <div class="tile-avatar">A</div>
+              <div class="tile-footer">
+                <span>Alex Vance (Host)</span>
+                <span>🎙️</span>
+              </div>
+            </div>
+
+            <div class="tile">
+              <span style="font-size:0.7rem; color:#93c5fd;">Peace Lead</span>
+              <div class="tile-avatar" style="background:#b45309;">M</div>
+              <div class="tile-footer">
+                <span>Marcus Sterling</span>
+                <span>🎙️</span>
+              </div>
+            </div>
+
+            <div class="tile">
+              <span style="font-size:0.7rem; color:#f43f5e;">Care Lead</span>
+              <div class="tile-avatar" style="background:#be123c;">S</div>
+              <div class="tile-footer">
+                <span>Sarah Laurent</span>
+                <span>✋ Raised</span>
+              </div>
+            </div>
+
+            <div class="tile">
+              <span style="font-size:0.7rem; color:#06b6d4;">Compassion</span>
+              <div class="tile-avatar" style="background:#0e7490;">J</div>
+              <div class="tile-footer">
+                <span>Jordan Rivera</span>
+                <span>🕊️ Peace</span>
+              </div>
+            </div>
+
+            <div class="tile">
+              <span style="font-size:0.7rem; color:#93c5fd;">Relief</span>
+              <div class="tile-avatar" style="background:#4338ca;">M</div>
+              <div class="tile-footer">
+                <span>Malik Toure</span>
+                <span>❤️ Love</span>
+              </div>
+            </div>
+
+            <div class="tile" id="youTile">
+              <span style="font-size:0.7rem; color:#10b981;">Active You</span>
+              <div class="tile-avatar" style="background:#047857;" id="youAvatar">Y</div>
+              <div class="tile-footer">
+                <span>You (Member)</span>
+                <span id="youMicStatus">🎙️</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="call-side">
+            <div>
+              <h4 style="font-size:0.8rem; font-weight:800; text-transform:uppercase; color:#93c5fd; margin-bottom:0.75rem;">
+                Meeting Agenda:
+              </h4>
+
+              <div class="agenda-card">
+                <strong style="color:white; display:block; margin-bottom:0.25rem;">1. Promoting Peace &amp; Harmony</strong>
+                Checking in on each brother and sister. Fostering forgiveness, patience, and mutual listening.
+              </div>
+
+              <div class="agenda-card">
+                <strong style="color:white; display:block; margin-bottom:0.25rem;">2. Helping Others in the Community</strong>
+                Planning food pantry deliveries and packing emergency care boxes for local families.
+              </div>
+
+              <div class="agenda-card">
+                <strong style="color:white; display:block; margin-bottom:0.25rem;">3. Mutual Member Support</strong>
+                Visiting sick members and providing support. Unconditional love in action.
+              </div>
+            </div>
+
+            <div style="font-size:0.75rem; text-align:center; color:#bfdbfe; font-style:italic; padding-top:1rem; border-top:1px solid var(--border-blue);">
+              "Our love never fail"
+            </div>
+          </div>
+        </div>
+
+        <div class="call-controls">
+          <div style="display:flex; gap:0.5rem;">
+            <button class="ctrl-btn" id="btnMic" onclick="toggleMic()">Mute Mic</button>
+            <button class="ctrl-btn" id="btnCam" onclick="toggleCam()">Toggle Cam</button>
+            <button class="ctrl-btn" id="btnHand" onclick="toggleHand()">Raise Hand</button>
+          </div>
+          <div style="display:flex; gap:0.5rem;">
+            <button class="ctrl-btn" onclick="sendReaction('❤️')">❤️</button>
+            <button class="ctrl-btn" onclick="sendReaction('🕊️')">🕊️</button>
+            <button class="ctrl-btn" onclick="sendReaction('🤝')">🤝</button>
+            <button class="ctrl-btn" style="background:var(--gold-accent); color:#030818;" onclick="openLoginModal('Call Room Connect')">Join Call Audio</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="media" class="section">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <div class="section-kicker">Shared Media Library</div>
+          <h2 class="section-title">Pictures &amp; Video Testimonies</h2>
+          <p class="section-desc">
+            Explore photos of community service and watch playable video testimonies from family members.
+          </p>
+        </div>
+        <button class="btn-gold" onclick="openLoginModal('Upload Media')">
+          + Add Pictures or Video
+        </button>
+      </div>
+
+      <div class="media-grid">
+        <div class="media-card" onclick="alert('Viewing: Shelter Renovation & Youth Mentorship')">
+          <img 
+            class="media-bg" 
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" 
+            alt="Shelter Renovation" 
+          />
+          <div class="media-scrim"></div>
+          <div class="media-content">
+            <span style="color:#f59e0b; font-size:0.75rem; font-weight:800; text-transform:uppercase;">Photo · Outreach</span>
+            <h3 style="font-size:1.25rem; font-weight:800;">Shelter Renovation &amp; Youth Mentorship</h3>
+            <p style="font-size:0.8rem; color:#bfdbfe;">Refurbishing youth classrooms and mentoring with love.</p>
+          </div>
+        </div>
+
+        <div class="media-card" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', 'Outreach Video Highlights')">
+          <img 
+            class="media-bg" 
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" 
+            alt="Peace Gathering" 
+          />
+          <div class="play-badge">▶</div>
+          <div class="media-scrim"></div>
+          <div class="media-content">
+            <span style="color:#f59e0b; font-size:0.75rem; font-weight:800; text-transform:uppercase;">Playable Video · Testimonies</span>
+            <h3 style="font-size:1.25rem; font-weight:800;">Outreach &amp; Peace Gathering Highlights</h3>
+            <p style="font-size:0.8rem; color:#bfdbfe;">Click to play video footage from our summer fellowship.</p>
+          </div>
+        </div>
+
+        <div class="media-card" onclick="alert('Viewing: Golden Hour Brotherhood Assembly')">
+          <img 
+            class="media-bg" 
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" 
+            alt="Brotherhood Assembly" 
+          />
+          <div class="media-scrim"></div>
+          <div class="media-content">
+            <span style="color:#f59e0b; font-size:0.75rem; font-weight:800; text-transform:uppercase;">Photo · Gatherings</span>
+            <h3 style="font-size:1.25rem; font-weight:800;">Golden Hour Fellowship Circle</h3>
+            <p style="font-size:0.8rem; color:#bfdbfe;">Brothers gathered in royal blue, celebrating unity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chat" class="section">
+    <div class="container">
+      <div class="section-kicker">Live Group Messaging</div>
+      <h2 class="section-title">All-Members Live Chat</h2>
+      <p class="section-desc">
+        Chat directly with all BMF brothers and sisters in real time. Share encouragement and coordinate help.
+      </p>
+
+      <div class="chat-container">
+        <div class="chat-sidebar">
+          <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; color:#f59e0b; margin-bottom:1rem;">
+            Online Family (6 Active)
+          </div>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.8rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span>Alex Vance (Director)</span>
+              <span style="color:#34d399;">●</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span>Marcus Sterling (Peace Lead)</span>
+              <span style="color:#34d399;">●</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span>Sarah Laurent (Welfare)</span>
+              <span style="color:#34d399;">●</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span>Jordan Rivera (Mentorship)</span>
+              <span style="color:#34d399;">●</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span>Malik Toure (Relief)</span>
+              <span style="color:#34d399;">●</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-feed">
+          <div class="chat-messages" id="chatMessagesBox">
+            <div class="chat-bubble">
+              <strong style="color:#f59e0b;">Alex Vance:</strong>
+              <p style="margin-top:0.25rem;">Blessed morning family! Remember our motto: Our love never fail! ❤️</p>
+            </div>
+            <div class="chat-bubble">
+              <strong style="color:#f59e0b;">Marcus Sterling:</strong>
+              <p style="margin-top:0.25rem;">Amen Alex! If any member needs a prayer or listening ear, I am here. 🕊️</p>
+            </div>
+            <div class="chat-bubble">
+              <strong style="color:#f59e0b;">Sarah Laurent:</strong>
+              <p style="margin-top:0.25rem;">The care packages for Elder Joseph arrived safely! Glory to God. 🙏</p>
+            </div>
+          </div>
+
+          <form onsubmit="handleChatSubmit(event)" style="display:flex; gap:0.5rem; margin-top:1rem;">
+            <input type="text" id="chatInputText" class="form-input" style="margin-bottom:0;" placeholder="Type your message to all members..." required />
+            <button type="submit" class="btn-gold" style="white-space:nowrap;">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="squad" class="section">
+    <div class="container">
+      <div class="section-kicker">Our Family Members</div>
+      <h2 class="section-title">The Family Roster</h2>
+      <p class="section-desc">
+        Brothers and sisters dedicated to helping others, upholding peace, and loving one another since 2021.
+      </p>
+
+      <div class="squad-grid">
+        <div class="member-card">
+          <div class="member-role">Community Outreach Director</div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.25rem;">Alex Vance</h3>
+          <p style="font-size:0.85rem; color:#bfdbfe; margin-bottom:1rem;">
+            Coordinates our volunteer outreach, ensuring supplies reach families in need with dignity and joy.
+          </p>
+          <div style="font-size:0.75rem; color:#f59e0b; font-style:italic;">
+            "Our love never fail"
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-role">Family Advisor &amp; Community Director</div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.25rem;">Marcus Sterling</h3>
+          <p style="font-size:0.85rem; color:#bfdbfe; margin-bottom:1rem;">
+            Provides wisdom, family guidance, and coordinates mutual support across all family members.
+          </p>
+          <div style="font-size:0.75rem; color:#f59e0b; font-style:italic;">
+            "Our love never fail"
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-role">Member Care &amp; Welfare</div>
+          <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.25rem;">Sarah Laurent</h3>
+          <p style="font-size:0.85rem; color:#bfdbfe; margin-bottom:1rem;">
+            Provides emotional and material assistance for family members experiencing hardship or illness.
+          </p>
+          <div style="font-size:0.75rem; color:#f59e0b; font-style:italic;">
+            "Our love never fail"
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="board" class="section">
+    <div class="container">
+      <div class="section-kicker">Encouragement &amp; Prayers</div>
+      <h2 class="section-title">Family Message Board</h2>
+      <p class="section-desc">
+        Leave a note for the family, share prayer requests, or plan community aid. Slogan: <strong>"Our love never fail"</strong>.
+      </p>
+
+      <div class="board-grid">
+        <div id="notesContainer">
+          <div class="note-card">
+            <strong style="color:white;">Alex Vance (@alex_anchor)</strong> · <span style="color:#f59e0b;">Helping Others</span>
+            <p style="font-size:0.85rem; color:#bfdbfe; margin-top:0.25rem;">
+              Volunteering this Saturday at 10 AM at the local shelter. Bringing warm blankets and meals. Join us!
+            </p>
+          </div>
+          <div class="note-card">
+            <strong style="color:white;">Marcus Sterling (@marcus_peace)</strong> · <span style="color:#f59e0b;">Peace &amp; Harmony</span>
+            <p style="font-size:0.85rem; color:#bfdbfe; margin-top:0.25rem;">
+              Remember: Where there is conflict, bring patience. Our love never fail!
+            </p>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:0.25rem;">Post a Message</h3>
+          <p style="font-size:0.75rem; color:#bfdbfe; margin-bottom:1rem;">Send words of encouragement to the family.</p>
+          <form onsubmit="handlePost(event)">
+            <input type="text" id="author" class="form-input" placeholder="Your Name" required />
+            <select id="tag" class="form-select">
+              <option>Helping Others</option>
+              <option>Peace &amp; Harmony</option>
+              <option>Family Love &amp; Support</option>
+              <option>Prayer &amp; Healing</option>
+            </select>
+            <textarea id="msg" class="form-textarea" rows="3" placeholder="Your message..." required></textarea>
+            <button type="submit" class="btn-gold" style="width:100%; justify-content:center;">Post to Family Board</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 style="font-family:var(--font-display); font-size:1.25rem; font-weight:800; margin-bottom:0.5rem;">B M F</h3>
+          <p style="font-size:0.85rem; color:#bfdbfe; margin-bottom:0.5rem;">
+            The Best Mate Family · Est. 2021
+          </p>
+          <div style="font-size:0.9rem; font-weight:700; color:#f59e0b; font-style:italic;">
+            "Our love never fail"
+          </div>
+        </div>
+        <div>
+          <h4 style="color:#f59e0b; font-size:0.8rem; text-transform:uppercase; margin-bottom:0.75rem;">Navigation</h4>
+          <ul style="list-style:none; font-size:0.85rem; color:#bfdbfe; display:flex; flex-direction:column; gap:0.5rem;">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#announcements">Announcements</a></li>
+            <li><a href="#meeting">Group Call Lounge</a></li>
+            <li><a href="#media">Pictures &amp; Videos</a></li>
+            <li><a href="#chat">Group Chat</a></li>
+            <li><a href="#squad">Family Roster</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#f59e0b; font-size:0.8rem; text-transform:uppercase; margin-bottom:0.75rem;">Core Values</h4>
+          <p style="font-size:0.8rem; color:#bfdbfe; line-height:1.6;">
+            Helping Others · Peace &amp; Harmony · Unconditional Love
+          </p>
+        </div>
+      </div>
+      <div style="text-align:center; padding-top:1.5rem; font-size:0.75rem; color:#93c5fd;">
+        © 2021–2026 B M F (The Best Mate Family). All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal Popup -->
+  <div class="modal-overlay" id="loginModalOverlay" onclick="handleBackdropClick(event)">
+    <div class="modal-box" id="loginModalBox" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+      <button type="button" class="modal-close-btn" onclick="closeLoginModal()" aria-label="Close Modal">
+        &times;
+      </button>
+
+      <div class="modal-header-icon">
+        <svg viewBox="0 0 100 100" width="34" height="34" fill="#f59e0b">
+          <path d="M25 20 H45 V75 L35 85 L25 75 Z" />
+          <path d="M55 20 H75 V75 L65 85 L55 75 Z" />
+          <path d="M35 20 L50 48 L65 20 Z" />
+          <path d="M15 25 H35 C50 25 50 48 35 48 H15 Z" />
+          <path d="M15 48 H38 C55 48 55 75 38 75 H15 Z" />
+          <path d="M65 25 H90 V38 H78 V50 H88 V62 H78 V75 H65 Z" />
+        </svg>
+      </div>
+
+      <h3 class="modal-title" id="modalHeading">BMF Member Verification</h3>
+      <p class="modal-subtitle">
+        Enter the private family room portal.
+        <span class="slogan-highlight">&ldquo;Our love never fail&rdquo;</span>
+      </p>
+
+      <div class="modal-error" id="modalErrorNotice"></div>
+
+      <form id="loginModalForm" onsubmit="handleLoginSubmit(event)">
+        <div class="modal-form-group">
+          <label class="modal-label" for="loginMemberName">Member Name</label>
+          <input 
+            type="text" 
+            id="loginMemberName" 
+            class="modal-input" 
+            placeholder="e.g. David / Grace / Marcus" 
+            required 
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="modal-form-group">
+          <label class="modal-label" for="loginKeyCode">Family Key Code</label>
+          <input 
+            type="password" 
+            id="loginKeyCode" 
+            class="modal-input" 
+            placeholder="Enter private key code..." 
+            required 
+            autocomplete="current-password"
+          />
+        </div>
+
+        <button type="submit" class="modal-submit-btn" id="modalSubmitBtn">
+          Verify Key &amp; Enter Room
+        </button>
+      </form>
+
+      <div class="modal-hint-box">
+        Authorized key codes: <strong>BMF2021</strong> or <strong>LOVE2021</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Player Modal -->
+  <div class="modal-overlay" id="videoModalOverlay" onclick="handleVideoBackdropClick(event)">
+    <div class="modal-box" style="max-width:720px; padding:1.25rem;">
+      <button type="button" class="modal-close-btn" onclick="closeVideoPlayer()">&times;</button>
+      <h3 style="font-size:1.15rem; font-weight:800; margin-bottom:0.75rem;" id="videoTitleLabel">Testimony Video</h3>
+      <video id="html5VideoPlayer" controls style="width:100%; border-radius:12px; background:black; max-height:420px;"></video>
+    </div>
+  </div>
+
+  <script>
+    let micOn = true;
+    let handRaised = false;
+    let currentUser = localStorage.getItem('bmf_standalone_user') || '';
+
+    if (currentUser) {
+      updateUserUI(currentUser);
+    }
+
+    function openLoginModal(context) {
+      const overlay = document.getElementById('loginModalOverlay');
+      const errorBox = document.getElementById('modalErrorNotice');
+      if (errorBox) {
+        errorBox.style.display = 'none';
+        errorBox.innerText = '';
+      }
+
+      const nameInput = document.getElementById('loginMemberName');
+      if (nameInput && currentUser) {
+        nameInput.value = currentUser;
+      }
+
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      setTimeout(() => {
+        if (nameInput && !nameInput.value) {
+          nameInput.focus();
+        } else {
+          const keyInput = document.getElementById('loginKeyCode');
+          if (keyInput) keyInput.focus();
+        }
+      }, 150);
+    }
+
+    function closeLoginModal() {
+      const overlay = document.getElementById('loginModalOverlay');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(event) {
+      if (event.target.id === 'loginModalOverlay') {
+        closeLoginModal();
+      }
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLoginModal();
+        closeVideoPlayer();
+      }
+    });
+
+    function handleLoginSubmit(event) {
+      event.preventDefault();
+      const nameInput = document.getElementById('loginMemberName');
+      const keyInput = document.getElementById('loginKeyCode');
+      const errorBox = document.getElementById('modalErrorNotice');
+      const submitBtn = document.getElementById('modalSubmitBtn');
+
+      const enteredName = nameInput.value.trim();
+      const enteredKey = keyInput.value.trim().toUpperCase();
+      const validCodes = ['BMF2021', 'LOVE2021', 'PEACE2021', 'BMF'];
+
+      if (!enteredName) {
+        showModalError('Please enter your member name.');
+        return;
+      }
+
+      submitBtn.innerText = 'Verifying Key...';
+
+      setTimeout(() => {
+        if (validCodes.includes(enteredKey)) {
+          currentUser = enteredName;
+          localStorage.setItem('bmf_standalone_user', currentUser);
+          updateUserUI(currentUser);
+
+          submitBtn.innerText = 'Key Accepted! Welcome Home';
+          submitBtn.style.background = '#10b981';
+          submitBtn.style.color = '#ffffff';
+
+          setTimeout(() => {
+            closeLoginModal();
+            submitBtn.innerText = 'Verify Key & Enter Room';
+            submitBtn.style.background = '';
+            submitBtn.style.color = '';
+            keyInput.value = '';
+
+            const targetSection = document.getElementById('meeting');
+            if (targetSection) {
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 600);
+        } else {
+          submitBtn.innerText = 'Verify Key & Enter Room';
+          showModalError('Invalid Family Key Code. Please use BMF2021 or LOVE2021.');
+        }
+      }, 400);
+    }
+
+    function showModalError(message) {
+      const errorBox = document.getElementById('modalErrorNotice');
+      errorBox.innerText = message;
+      errorBox.style.display = 'block';
+    }
+
+    function updateUserUI(name) {
+      const pill = document.getElementById('userPillDisplay');
+      const nameLabel = document.getElementById('userNameLabel');
+      if (pill && nameLabel) {
+        nameLabel.innerText = name;
+        pill.style.display = 'flex';
+      }
+    }
+
+    function openVideoPlayer(videoUrl, title) {
+      const overlay = document.getElementById('videoModalOverlay');
+      const player = document.getElementById('html5VideoPlayer');
+      const titleLabel = document.getElementById('videoTitleLabel');
+
+      if (titleLabel) titleLabel.innerText = title;
+      if (player) {
+        player.src = videoUrl;
+        player.play();
+      }
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoPlayer() {
+      const overlay = document.getElementById('videoModalOverlay');
+      const player = document.getElementById('html5VideoPlayer');
+      if (player) {
+        player.pause();
+        player.src = '';
+      }
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleVideoBackdropClick(event) {
+      if (event.target.id === 'videoModalOverlay') {
+        closeVideoPlayer();
+      }
+    }
+
+    function toggleMic() {
+      micOn = !micOn;
+      document.getElementById('btnMic').innerText = micOn ? 'Mute Mic' : 'Unmuted';
+      document.getElementById('youMicStatus').innerText = micOn ? '🎙️' : '🔇';
+    }
+
+    function toggleCam() {
+      const avatar = document.getElementById('youAvatar');
+      avatar.style.background = avatar.style.background === 'rgb(30, 58, 138)' ? '#047857' : '#1e3a8a';
+    }
+
+    function toggleHand() {
+      handRaised = !handRaised;
+      document.getElementById('btnHand').innerText = handRaised ? 'Lower Hand' : 'Raise Hand';
+      alert(handRaised ? 'Hand raised in meeting.' : 'Hand lowered.');
+    }
+
+    function sendReaction(emoji) {
+      alert('You sent ' + emoji + ' to the live room!');
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatInputText');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const box = document.getElementById('chatMessagesBox');
+      const bubble = document.createElement('div');
+      bubble.className = 'chat-bubble you';
+      const sender = currentUser || 'You';
+      bubble.innerHTML = '<strong style="color:#f59e0b;">' + escapeHtml(sender) + ':</strong><p style="margin-top:0.25rem;">' + escapeHtml(text) + '</p>';
+
+      box.appendChild(bubble);
+      box.scrollTop = box.scrollHeight;
+      input.value = '';
+    }
+
+    function handlePost(e) {
+      e.preventDefault();
+      const author = document.getElementById('author').value.trim();
+      const tag = document.getElementById('tag').value;
+      const msg = document.getElementById('msg').value.trim();
+      if (!author || !msg) return;
+
+      const container = document.getElementById('notesContainer');
+      const card = document.createElement('div');
+      card.className = 'note-card';
+      card.innerHTML = '<strong style="color:white;">' + escapeHtml(author) + '</strong> · <span style="color:#f59e0b;">' + escapeHtml(tag) + '</span><p style="font-size:0.85rem; color:#bfdbfe; margin-top:0.25rem;">' + escapeHtml(msg) + '</p>';
+      container.insertBefore(card, container.firstChild);
+
+      document.getElementById('author').value = '';
+      document.getElementById('msg').value = '';
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function simulateLoad(count) {
+      const counter1 = document.getElementById('liveMembersCount');
+      const counter2 = document.getElementById('statMembersCount');
+      if (counter1) counter1.innerText = Number(count).toLocaleString();
+      if (counter2) counter2.innerHTML = Number(count).toLocaleString() + '<span>+</span>';
+    }
+  </script>
+</body>
+</html>
